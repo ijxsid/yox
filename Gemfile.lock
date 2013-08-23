@@ -223,7 +223,7 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 1.2)
   jquery-rails
-  pg
+  pg (~> 0.16.0)
   puma
   rails (= 4.0.0)
   rspec-rails
