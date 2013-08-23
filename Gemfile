@@ -4,8 +4,7 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -63,6 +62,9 @@ group :test, :development do
   gem 'guard-spork'
   gem 'spork'
   gem 'childprocess'
+  
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 
 end
 
