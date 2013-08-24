@@ -61,8 +61,8 @@ gem 'haml-rails'
 group :test, :development do
   gem 'rspec-rails'
   gem 'guard-rspec'
-  gem 'guard-spork'
-  gem 'spork'
+  #gem 'guard-spork'
+  gem 'spork-rails', git: 'https://github.com/sporkrb/spork-rails.git'
   gem 'childprocess'
   
   
