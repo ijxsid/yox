@@ -1,84 +1,42 @@
 require 'spec_helper'
 
 describe "Static pages" do
+  subject { page }
+
   describe "Home page" do
     
-    it "should have the h1 'Sample App'" do
-      
-      visit '/static_pages/home'
-      page.should have_selector('h1', 'Sample App')                          
-      
-    end
+    before { visit root_path}
 
-    it "should have base title" do
-
-      visit '/static_pages/home'
-      page.should have_title("Rails Sample App")
-      
-    end
-
-    it "should not have costum page title" do
-
-      visit '/static_pages/home'
-      page.should_not have_title(" | Home")
-      
-    end
-
+    it { should have_selector('h1', 'Sample App') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title(" | Home") }
 
   end
 
   describe "Help page" do
+
+    before { visit help_path}
     
-    it "should have the h1 'Help'" do
-      
-      visit '/static_pages/help'
-      page.should have_selector('h1',' Help')
-      
-    end
+    it { should have_selector('h1',' Help') }
+    it { should have_title(full_title('Help')) }
 
-    it "should have indicative title" do
-
-      visit '/static_pages/help'
-      page.should have_title('Rails Sample App | Help')
-      
-    end
-  
   end
 
   describe "About page" do
+
+    before { visit about_path}
     
-    it "should have the h1 'About Us'" do
-      
-      visit '/static_pages/about'
-      page.should have_selector('h1', 'About Us')
-      
-    end
-
-    it "should have indicative title" do
-
-      visit '/static_pages/about'
-      page.should have_title("Rails Sample App | About Us")
-      
-    end
+    it { should have_selector('h1', 'About Us') }
+    it { should have_title(full_title('About')) }
 
   end
 
   describe "Contact page" do
-    
-    it "should have the  h1 'Contact'" do
-      
-      visit '/static_pages/contact'
-      page.should have_selector('h1', 'Contact')                          
-      
-    end
 
-    it "should have indicative title" do
+    before { visit contact_path}
 
-      visit '/static_pages/contact'
-      page.should have_title("Rails Sample App | Contact")
-      
-    end
-
+    it { should have_selector('h1', 'Contact') }
+    it { should have_title(full_title('Contact')) }
 
   end
 end
