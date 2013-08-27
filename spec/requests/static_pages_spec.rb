@@ -43,6 +43,12 @@ describe "Static pages" do
   describe "links on the layout" do
     
     before { visit root_path}
+
+    it 'should have a valid link to Sign in page' do
+
+      click_link 'Sign in'
+      page.should have_title(full_title('Sign in'))
+    end
     
     it 'should have a valid link to About page' do
       click_link 'About'
