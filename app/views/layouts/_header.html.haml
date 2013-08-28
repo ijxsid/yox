@@ -17,6 +17,6 @@
                 %li= link_to "Settings", "#"
                 %li.divider
                 %li
-                  = link_to "Sign out", signout_path
+                  = link_to "Sign out", signout_path, method: :delete
           - else
             %li= link_to 'Sign in', signin_path
