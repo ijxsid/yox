@@ -9,4 +9,4 @@ can do whatever you want with this stuff. If we meet some day, and you
 think this stuff is worth it, you can buy me a coffee. (NO BEER)
 
 TAKEN FROM BEER-WARE LICENSE. (REVISION 42)
-----------------------------------------------------------------------------
+
