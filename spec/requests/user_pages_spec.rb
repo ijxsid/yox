@@ -66,6 +66,8 @@ describe "UserPages" do
   describe "edit" do
     let(:user) { FactoryGirl.create(:user) }
     before do
+
+      # In order to access edit page, we need to sign in.
       valid_signin user 
       visit edit_user_path(user)
     end
