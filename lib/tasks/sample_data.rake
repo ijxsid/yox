@@ -1,10 +1,14 @@
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
-    User.create!(name: "Inderjit Sidhu",
+    admin = User.create!(name: "Inderjit Sidhu",
                   email: "inderjitsidhu@outlook.com",
                   password: "foobar",
                   password_confirmation: "foobar")
+    
+    admin.toggle!(:admin)
+    # But in  rails 4, we can use set admin property true, without
+    # any toggling.
 
     99.times do |n|
       name = Faker::Name.name
